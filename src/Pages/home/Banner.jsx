@@ -23,7 +23,7 @@ const Banner = () => {
             </div>
             <div id="slide2" className="carousel-item relative w-full">
                 <img src={banner2} className="w-full" />
-                <div className="absolute flex justify-between items-center transform -translate-y-1/2 left- right-0 top-1/2 hero-overlay hero-overlay">
+                <div className="absolute flex justify-between items-center transform -translate-y-1/2 left- right-0 top-1/2 hero-overlay">
                     <a href="#slide1" className="btn btn-circle ml-3">❮</a>
                     <div className="hero-content text-white">
                         <div className="text-center">

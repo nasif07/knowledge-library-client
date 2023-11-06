@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { PiBookOpenText } from 'react-icons/pi';
 
@@ -27,15 +27,11 @@ const Navbar = () => {
         </li>
     </>
 
-
-
-
-
     return (
         <div className="bg-[#FF9606] font-poppins">
             <div className="navbar  max-w-[1500px] mx-auto px-16">
                 <div className="navbar-start">
-                    <div className="dropdown">
+                    <div className="dropdown text-white">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
@@ -54,7 +50,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link to="/login"><a className="btn">Login</a></Link>
                 </div>
             </div>
         </div>

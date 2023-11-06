@@ -1,10 +1,11 @@
+import Title from "../../components/Title";
 import Banner from "./Banner";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h2>this is home</h2>
+            <Title>My Home</Title>
         </div>
     );
 };
