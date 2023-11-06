@@ -1,8 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 
 import { PiBookOpenText } from 'react-icons/pi';
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut();
+    }
+
 
     const items = <>
         <li>
@@ -50,7 +59,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login"><a className="btn">Login</a></Link>
+                    {
+
+                        user ?
+                            <button onClick={handleLogOut} className="btn ml-4">Log out</button>
+                            :
+                            <Link to="/login">
+                                <button className="btn">Login</button></Link>
+
+                    }
                 </div>
             </div>
         </div>
