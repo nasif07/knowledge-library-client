@@ -5,7 +5,7 @@ import Category from "./Category";
 const Categories = () => {
     const [categories, setCategories] = useState([]);
     useEffect(() => {
-        fetch('/public/category.json')
+        fetch('http://localhost:5000/allcategory')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
