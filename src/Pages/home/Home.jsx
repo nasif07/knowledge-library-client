@@ -1,11 +1,13 @@
-import Title from "../../components/Title";
 import Banner from "./Banner";
+import Categories from "./Categories";
+import Facilities from "./Facilities";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Title>My Home</Title>
+            <Categories></Categories>
+            <Facilities></Facilities>
         </div>
     );
 };

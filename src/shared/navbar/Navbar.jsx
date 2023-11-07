@@ -37,40 +37,53 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="bg-[#FF9606] font-poppins">
-            <div className="navbar  max-w-[1500px] mx-auto px-16">
-                <div className="navbar-start">
-                    <div className="dropdown text-white">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#FF9606] rounded-box w-52">
+        <>
+            <div>
+                {
+                    user ? <><div className="py-2 bg-[#191919] text-white font-poppins text-center">
+                        <h1 className="text-sm">Welcome {user.displayName} ❤️‍🔥❤️‍🔥. now you can see all our available books and borrowed the books.</h1>
+                    </div></> : ""
+                }
+            </div>
+            <div className="bg-[#FF9606] font-poppins">
+                <div className="navbar  max-w-[1500px] mx-auto px-16">
+                    <div className="navbar-start">
+                        <div className="dropdown text-white">
+                            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#FF9606] rounded-box w-52">
+                                {items}
+                            </ul>
+                        </div>
+                        <div className="md:flex justify-center items-center gap-4">
+                            <PiBookOpenText className="text-4xl text-[white]"></PiBookOpenText>
+                            <h4 className="md:text-2xl text-xl font-bold text-white font-kanit">Knowledge Library</h4>
+                        </div>
+                    </div>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className=" menu-horizontal gap-5 font-semibold text-white">
                             {items}
                         </ul>
                     </div>
-                    <div className="md:flex justify-center items-center gap-4">
-                        <PiBookOpenText className="text-4xl text-[white]"></PiBookOpenText>
-                        <h4 className="md:text-2xl text-xl font-bold text-white font-kanit">Knowledge Library</h4>
+                    <div className="navbar-end">
+                    <div className="w-10">
+                            {
+                                user ? <img className="rounded-full" src={`${user?.photoURL}`} />
+                                    : ""
+                            }
+                        </div>
+                        {
+                            user ?
+                                <button onClick={handleLogOut} className="btn ml-4">Log out</button>
+                                :
+                                <Link to="/login">
+                                    <button className="btn">Login</button></Link>
+                        }
                     </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className=" menu-horizontal gap-5 font-semibold text-white">
-                        {items}
-                    </ul>
-                </div>
-                <div className="navbar-end">
-                    {
-
-                        user ?
-                            <button onClick={handleLogOut} className="btn ml-4">Log out</button>
-                            :
-                            <Link to="/login">
-                                <button className="btn">Login</button></Link>
-
-                    }
-                </div>
             </div>
-        </div>
+        </>
     );
 };
 
