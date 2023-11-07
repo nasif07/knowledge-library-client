@@ -4,7 +4,7 @@ import img3 from '../assets/img-09.jpg'
 const NewReleaseCart = () => {
     return (
         <>
-        <div className="w-full max-w-sm bg-white">
+        <div className="w-full max-w-sm bg-white font-poppins">
             <a href="#">
                 <img className="rounded-t-lg" src={img1} alt="product image" />
             </a>
@@ -25,7 +25,7 @@ const NewReleaseCart = () => {
                 </div>
             </div>
         </div>
-        <div className="w-full max-w-sm bg-white">
+        <div className="w-full max-w-sm bg-white  font-poppins">
             <a href="#">
                 <img className="rounded-t-lg" src={img2} alt="product image" />
             </a>
@@ -46,7 +46,7 @@ const NewReleaseCart = () => {
                 </div>
             </div>
         </div>
-        <div className="w-full max-w-sm bg-white">
+        <div className="w-full max-w-sm bg-white  font-poppins">
             <a href="#">
                 <img className="rounded-t-lg" src={img3} alt="product image" />
             </a>
