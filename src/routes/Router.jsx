@@ -7,6 +7,8 @@ import ErrorPage from "../Pages/errorPage/ErrorPage";
 import AddBook from "../Pages/addBook/AddBook";
 import PrivateRoute from "../protectedRoute/PrivateRoute";
 import CategoryWiseBooks from "../components/bookcategory/CategoryWiseBooks";
+import AllBooks from "../Pages/allBooks/allBooks";
+import UpdateBooks from "../Pages/updateBooks/UpdateBooks";
 
 const router = createBrowserRouter([
   {
@@ -23,9 +25,19 @@ const router = createBrowserRouter([
         element: <PrivateRoute><AddBook></AddBook></PrivateRoute>
       },
       {
-        path: "/allbooks/:category",
+        path: "/books/:category",
         element: <CategoryWiseBooks></CategoryWiseBooks>,
         loader: () => fetch('http://localhost:5000/allbooks')
+      },
+      {
+        path:"/allbooks",
+        element: <PrivateRoute><AllBooks></AllBooks></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/allbooks')
+      },
+      {
+        path: "/allbooks/updatebook/:updatebooks",
+        element: <PrivateRoute><UpdateBooks></UpdateBooks></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/allbooks/${params.updatebooks}`)
       },
       {
         path: "/login",
@@ -35,7 +47,8 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <Signup></Signup>
       }
-    ]
+    ],
+    
   },
 ]);
 

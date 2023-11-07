@@ -11,7 +11,7 @@ const CategoryWiseBooks = () => {
     const allBooks = useLoaderData();
 
     useEffect(() => {
-        const findBook = allBooks.filter(selectBooks => selectBooks.Category == name.category);
+        const findBook = allBooks.filter(selectBooks => selectBooks.category == name.category);
         setBooks(findBook);
     }, [])
     console.log(books);
