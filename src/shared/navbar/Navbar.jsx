@@ -22,7 +22,7 @@ const Navbar = () => {
             </NavLink>
         </li>
         <li>
-            <NavLink to="/addbook" className={({ isActive, isPending }) =>
+            <NavLink to={`/addbook/${user?.email}`} className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold text-xl underline" : ""}>Add Book
             </NavLink>
         </li>

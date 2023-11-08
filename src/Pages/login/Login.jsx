@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import swal from "sweetalert";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Login = () => {
 
@@ -15,9 +16,16 @@ const Login = () => {
         const password = e.target.password.value;
 
         emailPasswordLogIn(email, password)
-            .then(res => {
-                console.log(res.message);
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
                 swal("Good job!", "Login successful!", "success");
+                const user = {email};
+                // get access token
+                axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+                .then(res => {
+                    console.log(res.data);
+                })
             })
             .catch(err => {
                 console.log(err);

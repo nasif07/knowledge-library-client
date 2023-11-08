@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Category = ({ category }) => {
     const { categoryName, categoryImage } = category;
-    console.log(category);
+    // console.log(category);c
     return (
         <div className="card rounded-xl card-compact border font-poppins">
             <figure><img className="h-[230px]" src={categoryImage} alt="Shoes" /></figure>

@@ -1,9 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import Title from "../../components/Title";
 import swal from "sweetalert";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const UpdateBooks = () => {
     const book = useLoaderData();
+    const {user} = useContext(AuthContext)
     const { authorName, category, image, name, quantity, rating, shortDescription, _id } = book;
 
 
@@ -27,8 +30,9 @@ const UpdateBooks = () => {
             rating,
         }
         console.log(allItem);
-        fetch(`http://localhost:5000/allbooks/${_id}`,{
+        fetch(`http://localhost:5000/allbooks/${_id}?email=janina`,{
             method: "PUT",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -36,8 +40,12 @@ const UpdateBooks = () => {
         })
         .then(res => res.json())
         .then(data => {
+            console.log(data);
             if(data.modifiedCount > 0) {
                 swal("data Updated!", "Data updated successfull!", "success");
+            }
+            if(data.message){
+                swal("unauthorized!", "you dont have power to update data!", "error");
             }
         })
     }

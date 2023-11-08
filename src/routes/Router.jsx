@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "/addbook",
+        path: "/addbook/:email",
         element: <PrivateRoute><AddBook></AddBook></PrivateRoute>
       },
       {

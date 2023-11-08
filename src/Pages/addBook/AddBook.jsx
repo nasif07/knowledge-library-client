@@ -1,7 +1,14 @@
 import swal from "sweetalert";
 import Title from "../../components/Title";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const AddBook = () => {
+    const {user} = useContext(AuthContext)
+
+    // 
+    // console.log(user.email);
+
     const handleAddBook = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -21,9 +28,9 @@ const AddBook = () => {
             quantity,
             rating,
         }
-        console.log(allItem);
-        fetch('http://localhost:5000/allbooks', {
+        fetch(`http://localhost:5000/allbooks?email=${user?.email}`, {
             method: "POST",
+            credentials: "include",
             headers: {
                 "content-Type": "application/json",
             },
@@ -35,7 +42,12 @@ const AddBook = () => {
                 if(data.insertedId){
                     swal("Book added!", "Book updated successfull!", "success");
                 }
+                if(data.message){
+                    swal("forbidden!", "you are not valid user!", "error");
+                }
             })
+            
+            
     }
 
     return (
