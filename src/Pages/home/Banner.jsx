@@ -3,7 +3,7 @@ import banner2 from "../../assets/banner-2.png"
 import banner3 from "../../assets/banner-3.png"
 const Banner = () => {
     return (
-        <div className="carousel w-full font-poppins">
+        <div className="carousel w-full font-poppins overflow-y-hidden">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={banner1} className="w-full" />
                 <div className="hero-overlay bg-opacity-60">
@@ -11,10 +11,10 @@ const Banner = () => {
                         <a href="#slide4" className="btn btn-circle ml-3">❮</a>
                         <div className="hero-content text-white">
                             <div className="text-center">
-                                <h1 className="text-2xl font-semibold py-6">ARE YOU SEARCHING A BOOK...?</h1>
-                                <h1 className="mb-5 text-5xl font-bold">BIGGEST LIBRARY</h1>
-                                <p className="mb-5">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
-                                <button className="btn mt-3 text-white bg-[#ff9606]">Get Started</button>
+                                <h1 className="md:text-2xl font-semibold md:py-6">ARE YOU SEARCHING A BOOK...?</h1>
+                                <h1 className="md:mb-5 text-xl md:text-5xl font-bold">BIGGEST LIBRARY</h1>
+                                <p className="md:mb-5 mb-0 hidden md:block">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
+                                <button className="btn hidden md:inline mt-3 text-white bg-[#ff9606]">Get Started</button>
                             </div>
                         </div>
                         <a href="#slide2" className="btn btn-circle mr-3">❯</a>
@@ -27,10 +27,10 @@ const Banner = () => {
                     <a href="#slide1" className="btn btn-circle ml-3">❮</a>
                     <div className="hero-content text-white">
                         <div className="text-center">
-                            <h1 className="text-2xl font-semibold py-6">ARE YOU SEARCHING A BOOK...?</h1>
-                            <h1 className="mb-5 text-5xl font-bold">BIGGEST LIBRARY</h1>
-                            <p className="mb-5">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
-                            <button className="btn mt-3 text-white bg-[#ff9606]">Get Started</button>
+                            <h1 className="md:text-2xl text-xl font-semibold md:py-6">ARE YOU SEARCHING A BOOK...?</h1>
+                            <h1 className="md:mb-5 text-2xl md:text-5xl font-bold">BIGGEST LIBRARY</h1>
+                            <p className="mb-5 hidden md:block">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
+                            <button className="btn mt-3 hidden md:inline text-white bg-[#ff9606]">Get Started</button>
                         </div>
                     </div>
                     <a href="#slide3" className="btn btn-circle mr-3">❯</a>
@@ -42,10 +42,10 @@ const Banner = () => {
                     <a href="#slide2" className="btn btn-circle ml-3">❮</a>
                     <div className="hero-content text-white">
                         <div className="text-center">
-                            <h1 className="text-2xl font-semibold py-6">ARE YOU SEARCHING A BOOK...?</h1>
-                            <h1 className="mb-5 text-5xl font-bold">BIGGEST LIBRARY</h1>
-                            <p className="mb-5">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
-                            <button className="btn mt-3 text-white bg-[#ff9606]">Get Started</button>
+                            <h1 className="md:text-2xl text-xl font-semibold md:py-6">ARE YOU SEARCHING A BOOK...?</h1>
+                            <h1 className="mb-5 text-2xl md:text-5xl font-bold">BIGGEST LIBRARY</h1>
+                            <p className="mb-5 hidden md:block">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
+                            <button className="btn hidden md:inline mt-3 text-white bg-[#ff9606]">Get Started</button>
                         </div>
                     </div>
                     <a href="#slide4" className="btn btn-circle mr-3">❯</a>
@@ -57,10 +57,10 @@ const Banner = () => {
                     <a href="#slide3" className="btn btn-circle ml-3">❮</a>
                     <div className="hero-content text-white">
                         <div className="text-center">
-                            <h1 className="text-2xl font-semibold py-6">ARE YOU SEARCHING A BOOK...?</h1>
-                            <h1 className="mb-5 text-5xl font-bold">BIGGEST LIBRARY</h1>
-                            <p className="mb-5">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
-                            <button className="btn mt-3 text-white bg-[#ff9606]">Get Started</button>
+                            <h1 className="md:text-2xl font-semibold md:py-6">ARE YOU SEARCHING A BOOK...?</h1>
+                            <h1 className="mb-5 texl-xl md:text-5xl font-bold">BIGGEST LIBRARY</h1>
+                            <p className="mb-5 hidden md:block">A library is a collection of books, and possibly other materials and media, <br /> that is accessible for use by its members and members of allied institutions.</p>
+                            <button className="btn hidden md:inline mt-3 text-white bg-[#ff9606]">Get Started</button>
                         </div>
                     </div>
                     <a href="#slide1" className="btn btn-circle mr-3">❯</a>

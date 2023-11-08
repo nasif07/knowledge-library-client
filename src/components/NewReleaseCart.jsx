@@ -6,7 +6,7 @@ const NewReleaseCart = () => {
         <>
         <div className="w-full max-w-sm bg-white font-poppins">
             <a href="#">
-                <img className="rounded-t-lg" src={img1} alt="product image" />
+                <img className="rounded-t-lg w-[200px] md:w-full" src={img1} alt="product image" />
             </a>
             <div className="pb-5">
                 <h3 className=' font-semibold text-lg py-4 text-[#484848]'>Adventure, fun</h3>
@@ -27,7 +27,7 @@ const NewReleaseCart = () => {
         </div>
         <div className="w-full max-w-sm bg-white  font-poppins">
             <a href="#">
-                <img className="rounded-t-lg" src={img2} alt="product image" />
+                <img className="rounded-t-lg w-[200px] md:w-full" src={img2} alt="product image" />
             </a>
             <div className="pb-5">
                 <h3 className=' font-semibold text-lg py-4 text-[#484848]'>Adventure, fun</h3>
@@ -48,7 +48,7 @@ const NewReleaseCart = () => {
         </div>
         <div className="w-full max-w-sm bg-white  font-poppins">
             <a href="#">
-                <img className="rounded-t-lg" src={img3} alt="product image" />
+                <img className="rounded-t-lg w-[200px] md:w-full" src={img3} alt="product image" />
             </a>
             <div className="pb-5">
                 <h3 className=' font-semibold text-lg py-4 text-[#484848]'>Adventure, fun</h3>

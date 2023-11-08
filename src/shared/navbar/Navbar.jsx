@@ -32,7 +32,7 @@ const Navbar = () => {
             </NavLink>
         </li>
         <li>
-            <NavLink to="/signup" className={({ isActive, isPending }) =>
+            <NavLink to="" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "underline font-bold text-xl" : ""}>Borrowed Books
             </NavLink>
         </li>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 }
             </div>
             <div className="bg-[#FF9606] font-poppins">
-                <div className="navbar  max-w-[1500px] mx-auto px-16">
+                <div className="navbar  max-w-[1500px] px-3 mx-auto md:px-16">
                     <div className="navbar-start">
                         <div className="dropdown text-white">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -73,7 +73,7 @@ const Navbar = () => {
                         </div>
                         <div className="md:flex justify-center items-center gap-4">
                             <PiBookOpenText className="text-4xl text-[white]"></PiBookOpenText>
-                            <h4 className="md:text-2xl text-xl font-bold text-white font-kanit">Knowledge Library</h4>
+                            <h4 className="md:text-2xl text-xl font-bold text-white font-kanit hidden md:block">Knowledge Library</h4>
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">

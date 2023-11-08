@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";
 
 const ShowBooks = ({ book }) => {
@@ -23,7 +23,7 @@ const ShowBooks = ({ book }) => {
                     {ReadonlyRating()}
                     <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">{rating}</span>
                 </div>
-                <NavLink to={`allbooks/bookdetails/${_id}`}><button className="btn bg-[#F99206] text-white hover:text-black normal-case mb-2 mt-4">Details</button></NavLink>
+                <Link to={`/allbooks/bookdetails/${_id}`}><button className="btn bg-[#F99206] text-white hover:text-black normal-case mb-2 mt-4">Details</button></Link>
             </div>
         </div>
     );

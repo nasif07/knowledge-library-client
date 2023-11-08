@@ -12,18 +12,18 @@ const BookDetailes = () => {
                 <h1 className="font-bold text-4xl md:text-6xl pb-8"><span className="">Here</span> Your Dream Car Details</h1>
                 <p className="md:text-xl mb-12">Buy car Buy happiness</p>
             </div> */}
-                <div className="card max-w-[600px] mx-auto border mb-16 font-kanit">
-                    <div className="flex items-center justify-center">
-                        <img className="p-12 max-w-[300px]" src={image} />
+                <div className=" max-w-[650px] mx-auto border mb-16 font-poppins flex flex-col md:flex-row items-center">
+                    <div className="flex justify-center">
+                        <img className="py-12 h-[400px] md:h-full max-w-[300px] pl-5" src={image} />
                     </div>
-                    <div className="card-body">
-                        <h2 className="card-title pb-4"><span className=" text-3xl font-bold">Book Name:</span>{name}</h2>
+                    <div className="justify-normal flex flex-col gap-5 px-3">
+                        <h2 className=""><span className=" text-2xl font-bold">Book Name:</span>{name}</h2>
                         <p><span className=" font-bold">Author Name: </span>{authorName}</p>
                         <p><span className=" font-bold">Category: </span>{category}</p>
                         <p><span className=" font-bold">Description: </span>{shortDescription}</p>
-                        <div className="card-actions justify-between items-center pt-12">
-                            <button className="btn text-white bg-[#FF9606]">Borrow</button>
-                            <button className="btn text-white bg-[#FF9606]">Read</button>
+                        <div className="card-actions justify-between items-center">
+                            <button className="p-3 border-2 border-black hover:bg-[#FF9606] hover:text-white transition rounded-full text-black">Borrow</button>
+                            <Link to={`/bookcontent/${_id}`}><button className="p-3 border-2 border-black hover:bg-[#FF9606] hover:text-white transition rounded-full px-4 text-black">Read</button></Link>
                         </div>
                     </div>
                 </div>
