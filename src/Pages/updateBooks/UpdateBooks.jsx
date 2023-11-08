@@ -30,7 +30,7 @@ const UpdateBooks = () => {
             rating,
         }
         console.log(allItem);
-        fetch(`http://localhost:5000/allbooks/${_id}?email=janina`,{
+        fetch(`http://localhost:5000/allbooks/${_id}?email=${user.email}`,{
             method: "PUT",
             credentials: "include",
             headers: {
