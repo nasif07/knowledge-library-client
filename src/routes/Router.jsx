@@ -30,31 +30,31 @@ const router = createBrowserRouter([
       {
         path: "/books/:category",
         element: <CategoryWiseBooks></CategoryWiseBooks>,
-        loader: () => fetch('http://localhost:5000/allbooks')
+        loader: () => fetch('https://knowledge-library-server.vercel.app/allbooks')
       },
       {
         path: "/borrowedbook",
         element: <PrivateRoute><BorrowedBooks></BorrowedBooks></PrivateRoute>
       },
       {
-        path: "/allbooks/bookdetails/:id",
+        path: "/bookdetails/:id",
         element: <PrivateRoute><BookDetailes></BookDetailes></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/allbooks/${params.id}`)
+        loader: ({params}) => fetch(`https://knowledge-library-server.vercel.app/allbooks/${params.id}`)
       },
       {
         path: "/bookcontent/:id",
         element: <PrivateRoute><BookContent></BookContent></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/allbooks/${params.id}`)
+        loader: ({params}) => fetch(`https://knowledge-library-server.vercel.app/allbooks/${params.id}`)
       },
       {
         path:"/allbooks",
         element: <PrivateRoute><AllBooks></AllBooks></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/allbooks')
+        // loader: () => fetch('https://knowledge-library-server.vercel.app/allbooks')
       },
       {
         path: "/allbooks/updatebook/:updatebooks",
         element: <PrivateRoute><UpdateBooks></UpdateBooks></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/allbooks/${params.updatebooks}`)
+        loader: ({params}) => fetch(`https://knowledge-library-server.vercel.app/allbooks/${params.updatebooks}`)
       },
       {
         path: "/login",

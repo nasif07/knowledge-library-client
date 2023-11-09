@@ -9,6 +9,7 @@ const ShowAllBooks = ({book}) => {
     function ReadonlyRating() {
         return <Rating value={parseFloat(rating)} readonly />;
     }
+    // console.log(typeof(quantity));
 
 
     return (
@@ -22,6 +23,7 @@ const ShowAllBooks = ({book}) => {
                     <h5 className="text-[20px] font-semibold tracking-tight text-gray-700 pb-4">{name}</h5>
                 </a>
                 <h3 className='font-medium text-[#484848]'>By: {authorName}</h3>
+                <h2>Quantity: {quantity}</h2>
                 <div className="flex items-center mt-2.5">
                     {ReadonlyRating()}
                     <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">{rating}</span>

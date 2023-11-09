@@ -9,7 +9,7 @@ const BorrowedBooks = () => {
     const { user } = useContext(AuthContext)
     const [borrowedBook, setBorrowedBook] = useState([])
 
-    const url = `http://localhost:5000/borrowed?email=${user.email}`
+    const url = `https://knowledge-library-server.vercel.app/borrowed?email=${user.email}`
 
     useEffect(() => {
         fetch(url)
@@ -19,7 +19,7 @@ const BorrowedBooks = () => {
     console.log(borrowedBook);
 
     const handleReturn = id => {
-        fetch(`http://localhost:5000/borrowed/${id}`,{
+        fetch(`https://knowledge-library-server.vercel.app/borrowed/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

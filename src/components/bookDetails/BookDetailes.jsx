@@ -18,7 +18,7 @@ const BookDetailes = () => {
         const month = today.getMonth() + 1;
         const year = today.getFullYear();
         const date = today.getDate();
-        const currentDate = month + "/" + date + "/" + year;
+        const currentDate = year + "-" + month + "-" + date;
         const order = {
             name,
             email,
@@ -28,7 +28,7 @@ const BookDetailes = () => {
             currentDate
         }
         console.log(order);
-        fetch(`http://localhost:5000/borrowed?email=${user.email}`,{
+        fetch(`https://knowledge-library-server.vercel.app/borrowed?email=${user.email}`,{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,6 +41,7 @@ const BookDetailes = () => {
             if(data.insertedId){
                 toast.success("Book Borrowed successfull!")
             }
+            else(toast.error("you do not borrowed same book second time please return the book and borrow again!"))
         })
     }
 
@@ -77,7 +78,7 @@ const BookDetailes = () => {
                                         <form onSubmit={handleBorrowBook}>
                                             <p>return date</p>
                                             <input className="border-2" type="date" name="date" id="" />
-                                            <button className="btn ml-4" type="submit">Submit</button>
+                                            <button className="btn btn-outline text-lg font-semibold ml-4" type="submit">Submit</button>
                                         </form>
                                     </div>
                                     <div className="modal-action">

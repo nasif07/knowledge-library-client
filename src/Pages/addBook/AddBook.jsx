@@ -28,7 +28,7 @@ const AddBook = () => {
             quantity,
             rating,
         }
-        fetch(`http://localhost:5000/allbooks?email=${user?.email}`, {
+        fetch(`https://knowledge-library-server.vercel.app/allbooks?email=${user?.email}`, {
             method: "POST",
             credentials: "include",
             headers: {
