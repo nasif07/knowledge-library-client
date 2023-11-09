@@ -17,7 +17,8 @@ const AddBook = () => {
         const authorName = form.authorName.value;
         const category = form.category.value;
         const description = form.description.value;
-        const quantity = form.quantity.value;
+        const quantityinstring = form.quantity.value;
+        const quantity = parseInt(quantityinstring)
         const rating = form.rating.value;
         const allItem = {
             image,
